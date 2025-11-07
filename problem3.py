@@ -30,3 +30,21 @@ Enter an integer=>4
 Enter an integer=>2
 2,4,5 do not form a Pythagorean triple
 """
+
+a = input("Enter a number:")
+b = input("Enter a second number:")
+c = input("Enter a third number:")
+
+a = int(a)
+b = int(b)
+c = int(c)
+
+largest = max(a,b,c)
+smallest = min(a,b,c)
+middle = (a+b+c) - largest - smallest
+
+if smallest**2 + middle**2 == largest**2:
+    print(f"{a},{b},{c} are a Pythagorean Triple")
+else:
+    print(f"{a},{b},{c} are not a Pythagorean Triple")
+
